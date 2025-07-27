@@ -1,0 +1,10 @@
+ALTER TABLE driver ADD  driver_approval_status VARCHAR(255) NULL;
+ALTER TABLE driver ADD active_city VARCHAR(255) Null;
+ALTER TABLE driver ADD last_location_id BIGINT NULL;
+ALTER TABLE driver ADD home_id BIGINT NULL;
+ALTER TABLE driver ADD rating DOUBLE NULL;
+
+
+ALTER TABLE driver ADD CONSTRAINT FK_DRIVER_ON_HOME FOREIGN KEY (home_id) REFERENCES location (id);
+
+ALTER TABLE driver ADD CONSTRAINT FK_DRIVER_ON_LAST_LOCATION FOREIGN KEY (last_location_id) REFERENCES location (id);
