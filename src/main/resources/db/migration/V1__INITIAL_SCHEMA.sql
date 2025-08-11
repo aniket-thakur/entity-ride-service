@@ -1,5 +1,5 @@
 CREATE TABLE booking (
-  id BIGINT NOT NULL,
+  id BIGINT NOT NULL AUTO_INCREMENT,
    created_at datetime NOT NULL,
    updated_at datetime NOT NULL,
    review_id BIGINT NULL,
@@ -14,7 +14,7 @@ CREATE TABLE booking (
 
 
 CREATE TABLE driver (
-  id BIGINT NOT NULL,
+  id BIGINT NOT NULL AUTO_INCREMENT,
    created_at datetime NOT NULL,
    updated_at datetime NOT NULL,
    name VARCHAR(255) NOT NULL,
@@ -26,7 +26,7 @@ CREATE TABLE driver (
 
 
 CREATE TABLE driver_review (
-  id BIGINT NOT NULL,
+  id BIGINT NOT NULL AUTO_INCREMENT,
    driver_review VARCHAR(255) NULL,
    CONSTRAINT pk_driverreview PRIMARY KEY (id)
 );
@@ -34,7 +34,7 @@ CREATE TABLE driver_review (
 
 
 CREATE TABLE passenger (
-  id BIGINT NOT NULL,
+  id BIGINT NOT NULL AUTO_INCREMENT,
    created_at datetime NOT NULL,
    updated_at datetime NOT NULL,
    name VARCHAR(255) NOT NULL,
@@ -42,7 +42,7 @@ CREATE TABLE passenger (
 );
 
 CREATE TABLE booking_review (
-  id BIGINT NOT NULL,
+  id BIGINT NOT NULL AUTO_INCREMENT,
    created_at datetime NOT NULL,
    updated_at datetime NOT NULL,
    content VARCHAR(255) NOT NULL,

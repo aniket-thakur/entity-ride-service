@@ -7,5 +7,7 @@ public enum BookingStatus {
     DELAYED,
     ASSIGNING_DRIVER,
     IN_RIDE,
-    COMPLETED
+    COMPLETED,
+    BOOKING_STATUS,
+    ASSIGNING_DRVIER
 }

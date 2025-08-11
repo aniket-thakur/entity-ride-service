@@ -3,6 +3,7 @@ package com.learning.entityService.models;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.engine.internal.Cascade;
 
 import java.util.Date;
 @Getter
@@ -36,4 +37,10 @@ public class Booking extends BaseModel {
 
     @ManyToOne
     private Passenger passenger;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    private Location pickupPoint;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    private Location dropPoint;
 }
